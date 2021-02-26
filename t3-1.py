@@ -22,6 +22,9 @@ dict={
     9:{'i':7,'j':4}
     }
 
+def clrBoard():
+    board[1][0]=board[1][2]=board[1][4]=board[4][0]=board[4][2]=board[4][4]=board[7][0]=board[7][2]=board[7][4]=" "
+
 def printBoard():
     for i in range(8):
         for j in range(5):
@@ -153,6 +156,7 @@ def main():
     user="X"
     comp="O"
     while input("Play a new game? (Y/N) ").upper() =="Y":
+        clrBoard()
         if chance%2==0:
             printBoard()
             play(user)
